@@ -1,4 +1,5 @@
 // Funkcja do ładowania użytkowników z localStorage
+
 function loadUsersFromStorage() {
     const storedUsers = localStorage.getItem('users');
     return storedUsers ? JSON.parse(storedUsers) : {};
