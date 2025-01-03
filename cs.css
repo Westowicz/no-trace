@@ -1,0 +1,193 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding-bottom: 60px;
+    overflow-y: auto; /* Zapewnienie przewijania strony */
+}
+
+body {
+    color: #000;
+    background-color: #641e98;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+}
+
+button:focus {
+    outline: 2px solid #ff0;
+}
+
+input, textarea {
+    border: 2px solid #000;
+}
+
+/* Header */
+header {
+    background: linear-gradient(180deg, #af21d7, #281246);
+    padding: 1rem;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: sticky; /* Nagłówek zawsze widoczny */
+    top: 0;
+    z-index: 1000; /* Zapobiega zakrywaniu przez inne elementy */
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #030006;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 2.0);
+    margin: 0;
+}
+
+#homepage-image img {
+    height: 150px;
+    width: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #35175f;
+    color: #aa8cd4;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Wysokość stopki */
+    line-height: 20px; /* Wyrównanie tekstu w pionie */
+    z-index: 1000; /* Wyższy priorytet względem zawartości */
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 1rem;
+    min-height: calc(100vh - 150px - 50px); /* Uwzględnienie wysokości nagłówka i stopki */
+    margin-bottom: 50px; /* Przestrzeń na stopkę */
+    overflow-y: auto; /* Scrollowanie w razie potrzeby */
+}
+
+h1, h2, h3 {
+    color: #aa8cd4;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+/* Message List */
+#message-list {
+    list-style: none;
+    padding: 0;
+    max-height: 250px; /* Ograniczenie wysokości */
+    overflow-y: auto; /* Dodane przewijanie */
+}
+
+#message-list li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Chat Preview */
+#chat-preview {
+    background-color: #716094;
+    border: 2px solid #3f044e;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#chat-preview h2 {
+    font-size: 1.5rem;
+    color: #110325;
+    margin-bottom: 0.5rem;
+}
+
+#preview-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#preview-list li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+#preview-list li:last-child {
+    border-bottom: none;
+}
+
+/* Forms and Pop-ups */
+#registration-form, #login-form, #settings-section {
+    max-height: 80vh; /* Ograniczenie wysokości */
+    overflow-y: auto; /* Przewijanie w razie potrzeby */
+    margin: 0 auto; /* Wyśrodkowanie */
+}
+
+form {
+    max-width: 500px;
+    margin: 1rem auto;
+}
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.prywatnelogo {
+    height: 20px;
+    width: auto;
+
+}

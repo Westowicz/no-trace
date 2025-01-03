@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Komunikator internetowy z rejestracją i logowaniem, dostępny zgodnie z WCAG">
+    <link rel="icon" type="image/jpeg" href="zdj.png">
+    </head>
+    <title>NoTrace</title>
+    <link rel="stylesheet" href="cs.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NoTrace</h1>
+        <section id="homepage-image" role="complementary" aria-label="Logo aplikacji">
+            <img src="zdj.png" alt="Logo NoTrace">
+        </section>
+    </header>
+
+    <main>
+        <!-- Podgląd ostatnich wiadomości -->
+        <section id="chat-preview" aria-labelledby="chat-preview-heading">
+            <h2 id="chat-preview-heading">Podgląd ostatnich wiadomości</h2>
+            <ul id="preview-list" aria-live="polite">
+                <!-- Ostatnie wiadomości -->
+            </ul>
+        </section>
+
+        <!-- Sekcja autoryzacji (Rejestracja/Logowanie) -->
+        <section id="auth-section" aria-labelledby="auth-heading">
+            <h2 id="auth-heading">Rejestracja / Logowanie</h2>
+            <div>
+                <button id="show-register" aria-label="Pokaż formularz rejestracji">🔒 Rejestracja</button>
+                <button id="show-login" aria-label="Pokaż formularz logowania">🔑 Logowanie</button>
+            </div>
+
+            <!-- Formularz rejestracji -->
+            <div id="registration-form" class="hidden" role="region" aria-labelledby="registration-heading">
+                <h3 id="registration-heading">Formularz rejestracji</h3>
+                <form id="register-form">
+                    <label for="register-username">Nazwa użytkownika:</label>
+                    <input type="text" id="register-username" placeholder="Podaj nazwę użytkownika..." required>
+                    <label for="register-password">Hasło:</label>
+                    <input type="password" id="register-password" placeholder="Podaj hasło..." required>
+                    <label for="register-nickname">Pseudonim:</label>
+                    <input type="text" id="register-nickname" placeholder="Podaj pseudonim (opcjonalne)...">
+                    <button type="submit">Zarejestruj</button>
+                </form>
+            </div>
+
+            <!-- Formularz logowania -->
+            <div id="login-form" class="hidden" role="region" aria-labelledby="login-heading">
+                <h3 id="login-heading">Formularz logowania</h3>
+                <form id="login-form-inner">
+                    <label for="login-username">Nazwa użytkownika:</label>
+                    <input type="text" id="login-username" placeholder="Podaj nazwę użytkownika..." required>
+                    <label for="login-password">Hasło:</label>
+                    <input type="password" id="login-password" placeholder="Podaj hasło..." required>
+                    <button type="submit">Zaloguj</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sekcja czatu -->
+        <section id="chat-section" class="hidden" aria-labelledby="chat-heading">
+            <h2 id="chat-heading">Czat</h2>
+            <ul id="message-list" aria-live="polite" role="log">
+                <!-- Wiadomości pojawią się tutaj -->
+            </ul>
+            <form id="message-form" aria-label="Formularz wysyłania wiadomości">
+                <label for="message-input">Wiadomość:</label>
+                <textarea id="message-input" name="message" aria-required="true" placeholder="Wpisz swoją wiadomość tutaj..."></textarea>
+                <button type="submit">Wyślij</button>
+            </form>
+
+            <!-- Przycisk wylogowania -->
+            <button id="logout-btn">Wyloguj się</button>
+
+            <!-- Przycisk ustawień -->
+            <button id="settings-btn" aria-label="Przejdź do ustawień profilu">⚙ Ustawienia</button>
+
+            <!-- Sekcja ustawień użytkownika -->
+            <div id="settings-section" class="hidden" role="region" aria-labelledby="profile-heading">
+                <h3 id="profile-heading">Twój profil</h3>
+                <form id="change-nickname-form">
+                    <label for="new-nickname">Nowy pseudonim:</label>
+                    <input type="text" id="new-nickname" placeholder="Podaj nowy pseudonim...">
+                    <button type="submit">Zmień pseudonim</button>
+                </form>
+                <form id="change-password-form">
+                    <label for="new-password">Nowe hasło:</label>
+                    <input type="password" id="new-password" placeholder="Podaj nowe hasło...">
+                    <button type="submit">Zmień hasło</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NoTrace. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>
