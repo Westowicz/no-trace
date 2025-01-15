@@ -1,15 +1,9 @@
 {
-  "name": "mazurek",
+  "name": "my-app",
   "version": "1.0.0",
-  "main": "java.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^4.21.2",
     "socket.io": "^4.8.1"
